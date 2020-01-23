@@ -1,11 +1,13 @@
 package denysiuk.springprojects.petclinic.services.map;
 
 import denysiuk.springprojects.petclinic.model.Pet;
-import denysiuk.springprojects.petclinic.services.CrudService;
+import denysiuk.springprojects.petclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet,Long> implements CrudService<Pet, Long> {
+@Service
+public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
