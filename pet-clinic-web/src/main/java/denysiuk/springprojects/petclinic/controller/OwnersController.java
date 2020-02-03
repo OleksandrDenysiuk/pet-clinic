@@ -32,8 +32,6 @@ public class OwnersController {
     public String processFindForm(Owner owner, BindingResult result, Model model){
         if(owner.getLastName() == null){
             owner.setLastName("");
-            model.addAttribute("selections", ownerService.findAll());
-            return "owners/ownersList";
         }
 
         List<Owner> results = ownerService.findAllByLastNameLike("%" + owner.getLastName() + "%");
